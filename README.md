@@ -18,7 +18,7 @@
 ![Extraction APK](pic/libfoo.png)
 
 ## lib foo:
-![Extraction APK](pic/static.png)
+![Extraction APK](pic/satic.png)
 ![Extraction APK](pic/libfoo2.png)
 
 ## en doit utiliser ghidra pour voire le code source ,executer le fichier .bat :
