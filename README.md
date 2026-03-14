@@ -1,45 +1,31 @@
-# LAB-5-Reverse-Engineering-de-UnCrackable-Level-2
-
-## 📌 Description
-[cite_start]Ce laboratoire consiste à analyser l'application Android **Uncrackable Level 2** afin de découvrir le mot secret utilisé pour la validation[cite: 1]. [cite_start]L'objectif est de pratiquer le reverse engineering sur du code Java et du code natif compilé[cite: 1].
-
----
-
-## 🛠️ Outils Utilisés
-* [cite_start]**unzip** : Pour extraire le contenu du fichier APK[cite: 2, 3].
-* [cite_start]**JADX** : Pour décompiler et analyser le code Java et le manifeste[cite: 12, 78].
-* [cite_start]**Ghidra** : Pour le reverse engineering de la bibliothèque native `libfoo.so`.
-
----
-
-## 📂 Étape 1 : Extraction et Analyse de la Structure
-[cite_start]La première étape consiste à extraire l'APK pour accéder aux fichiers internes[cite: 2].
-* [cite_start]**Commande** : `unzip UnCrackable-Level2.apk -d uncrackable_12`[cite: 3].
+### LAB 5 : Reverse Engineering de UnCrackable Level 2
+## unzip le fichier .apk 
 ![image.png](attachment:f9678413-3c91-42ba-8529-91360ca5a21e:image.png)
-* [cite_start]**Fichiers obtenus** : `AndroidManifest.xml`, `classes.dex`, et le répertoire `lib`[cite: 5, 112, 100].
 
-> **🖼️ Image 1 : Structure des fichiers extraits**
-> *(Capture d'écran montrant les fichiers AndroidManifest, classes.dex et le dossier lib)*
+## android manifest dans jadx:
+![image.png](attachment:cfb15e53-69d0-4d8a-914c-396aec42005d:image.png)
 
----
+## verifie function:
+![image.png](attachment:19496ef6-534c-45ee-98fc-e857837b1765:image.png)
 
-## 🔎 Étape 2 : Analyse du AndroidManifest.xml
-[cite_start]Le manifeste révèle les informations de configuration de l'application[cite: 25].
-* [cite_start]**Package** : `owasp.mstg.uncrackable2`[cite: 32].
-* [cite_start]**Activité principale** : `sg.vantagepoint.uncrackable2.MainActivity`[cite: 44].
+## le code checker:
+![image.png](attachment:3ee9b430-684b-4af2-bfe8-f0b3f46f0f9b:image.png)
 
----
+## unzip unckrackabel L2:
+![image.png](attachment:0fedfa81-2542-4139-bba4-b2f5f4d05f4f:image.png)
 
-## 🧠 Étape 3 : Analyse du Code Java (JADX)
-[cite_start]En analysant la `MainActivity`, on identifie la méthode de vérification[cite: 53].
-* [cite_start]La fonction `verify` récupère le texte saisi et appelle la méthode `a` de la classe `CodeCheck`[cite: 55, 56].
-* [cite_start]La classe `CodeCheck` contient une méthode **native** nommée `bar`[cite: 78, 80].
-* [cite_start]Le code charge la bibliothèque native via `System.loadLibrary("foo")`[cite: 142].
+## lib file :
+![image.png](attachment:acf70981-df0a-4dc4-9ac4-fe2d0a00b29b:image.png)
 
-```java
-// Extrait de CodeCheck.java [cite: 80, 84]
-private native boolean bar(byte[] bArr);
+## lib foo:
+![image.png](attachment:ad4dbb41-2fc1-4f26-85a6-898470ea2a5e:image.png)
+![image.png](attachment:9191b52f-ce9b-49d2-96f3-3f43f2159bf1:image.png)
 
-public boolean a(String str) {
-    return bar(str.getBytes());
-}
+## en doit utiliser ghidra pour voire le code source ,executer le fichier .bat :
+![image.png](attachment:f31ec21d-3cae-43b1-b6ce-656149941148:image.png)
+
+## ghidra lifoo file :
+![image.png](attachment:31b5f9f5-5f6f-42c9-8c4e-7b12499387ca:image.png)
+
+## alors le code source c’est :
+![image.png](attachment:9fcb9ec8-1702-4d0a-a8ec-e62529a22db8:image.png)
