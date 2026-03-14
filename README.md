@@ -1,6 +1,6 @@
 ### LAB 5 : Reverse Engineering de UnCrackable Level 2
 ## unzip le fichier .apk 
-![image.png](attachment:f9678413-3c91-42ba-8529-91360ca5a21e:image.png)
+![Extraction APK](pic/unzip.png)
 
 ## android manifest dans jadx:
 ![image.png](attachment:cfb15e53-69d0-4d8a-914c-396aec42005d:image.png)
