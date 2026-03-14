@@ -26,18 +26,33 @@ Puisque la validation est "native", nous devons utiliser Ghidra pour transformer
 ![Extraction APK](pic/fichier.png)
 
 ## Fichier .so:
+
 ![Extraction APK](pic/libfoo.png)
 
 ## lib foo:
+
+Il n'est pas possible de visualiser ou d'analyser le contenu du fichier .so directement avec JAD
+X
 ![Extraction APK](pic/satic.png)
+
 ![Extraction APK](pic/libfoo2.png)
 
+car il s'agit d'une bibliothèque native compilée. Pour analyser ce type de fichier, il est nécessaire d'utiliser un outil de reverse engineering comme Ghidra.
 ## outil GHIDRA:
+
 Outil : Utilisation de ghidraRun.bat pour lancer l'environnement d'analyse
+
 ![Extraction APK](pic/ghidra.png)
 
 ## ghidra lifoo file :
+
+On peut visualiser et analyser le fichier .so à l'aide de Ghidra.
+
 ![Extraction APK](pic/libfooghidra.png)
 
 ## Identification du Secret
+
 ![Extraction APK](pic/source.png)
+
+le code source c'est : Thanks for all the fish
+
