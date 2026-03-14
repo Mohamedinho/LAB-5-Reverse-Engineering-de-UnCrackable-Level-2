@@ -1,7 +1,6 @@
 ### LAB 5 : Reverse Engineering de UnCrackable Level 2
 ## unzip le fichier .apk 
-
-Voici une version complète et structurée de ton rapport au format README.md. Ce document explique chaque étape de ton travail en y intégrant les explications pour chaque image présente dans ton PDF.🛡️ Rapport de TP : Reverse Engineering - UnCrackable Level 2Ce rapport documente la méthodologie utilisée pour découvrir le secret de l'application UnCrackable Level 2 en utilisant l'analyse statique Java et la décompilation de code natif.📂 Étape 1 : Extraction de l'APKLa première étape consiste à décompresser le fichier APK pour accéder aux ressources et aux bibliothèques compilées.
+j'utilise Gitbash
 
 ![Extraction APK](pic/unzip.png)
 
