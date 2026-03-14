@@ -25,7 +25,7 @@ Puisque la validation est "native", nous devons utiliser Ghidra pour transformer
 
 ![Extraction APK](pic/fichier.png)
 
-## lib file :
+## Fichier lab qui contien librairie libfoo:
 ![Extraction APK](pic/libfoo.png)
 
 ## lib foo:
